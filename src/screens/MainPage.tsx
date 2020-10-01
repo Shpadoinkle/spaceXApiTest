@@ -1,6 +1,7 @@
 import { Grid, Typography } from "@material-ui/core";
 import React, { FunctionComponent } from "react";
 import NextLaunch from "../components/NextLaunch";
+import PreviousLaunches from "../components/PreviousLaunches";
 import Rockets from "../components/Rockets";
 
 const MainPage: FunctionComponent = () => {
@@ -25,6 +26,9 @@ const MainPage: FunctionComponent = () => {
             <NextLaunch />
           </Grid>
         </Grid>
+      </Grid>
+      <Grid item xs={12}>
+        <PreviousLaunches />
       </Grid>
     </Grid>
   );

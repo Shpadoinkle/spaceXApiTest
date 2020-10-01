@@ -6,7 +6,6 @@ import React, { FunctionComponent } from "react";
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
-    textAlign: "center",
     color: theme.palette.text.secondary,
   },
   contentHeader: { fontWeight: 700, marginRight: theme.spacing(1) },
@@ -23,6 +22,7 @@ const GET_NEXT_LAUNCH = gql`
       }
       mission_name
       launch_date_utc
+      details
     }
   }
 `;
@@ -60,7 +60,7 @@ const MainPage: FunctionComponent = () => {
             alignContent="flex-start"
             spacing={1}
             xs={12}
-            sm={8}
+            sm={12}
           >
             <Grid container item xs={12}>
               <div className={classes.contentHeader}>Mission Name:</div>
@@ -73,6 +73,10 @@ const MainPage: FunctionComponent = () => {
             <Grid container item xs={12}>
               <div className={classes.contentHeader}>Rocket Type:</div>
               <div>{` ${launchNext.rocket.rocket_name}`}</div>
+            </Grid>
+            <Grid container item xs={12}>
+              <div className={classes.contentHeader}>Details:</div>
+              <div>{` ${launchNext.details}`}</div>
             </Grid>
           </Grid>
         </Paper>
