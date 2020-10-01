@@ -8,7 +8,8 @@ Built a simple react app that queries the public spaceX api at https://api.space
 - Apollo Client for Graphql query
 
 **Deployment**
-Deployed using firebase hosting, as it is quick and easy. Live Deployment of this app can be found [here](https://thoash-spacex.firebaseapp.com/)
+
+Deployed using firebase hosting, as it is quick and easy. Live Deployment of this app can be found here at [https://thoash-spacex.firebaseapp.com/](https://thoash-spacex.firebaseapp.com/)
 
 **Technical Challenges**
 
