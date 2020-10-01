@@ -1,5 +1,6 @@
 import { Divider, Grid, Hidden, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import moment from "moment";
 import React, { FunctionComponent } from "react";
 import { Cell, Pie, PieChart } from "recharts";
 
@@ -38,7 +39,7 @@ const ListShip: FunctionComponent<any> = ({ ship = {} }) => {
             </Grid>
             <Grid container item direction="row" xs={12}>
               <div className={classes.contentHeader}>First Flight:</div>
-              <div>{` ${ship.first_flight}`}</div>
+              <div>{` ${moment(ship.first_flight).format("DD/MM/YYYY")}`}</div>
             </Grid>
             <Grid container item direction="row" xs={12}>
               <div className={classes.contentHeader}>Cost per launch:</div>

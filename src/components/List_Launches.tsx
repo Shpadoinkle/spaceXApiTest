@@ -1,5 +1,6 @@
 import { Divider, Grid, Hidden, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import moment from "moment";
 import React, { FunctionComponent } from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +33,9 @@ const ListShip: FunctionComponent<any> = ({ launch = {} }) => {
             </Grid>
             <Grid container item direction="row" xs={12}>
               <div className={classes.contentHeader}>Launch Date:</div>
-              <div>{` ${launch.launch_date_utc}`}</div>
+              <div>{` ${moment(launch.launch_date_utc).format(
+                "hh:mma DD/MM/YYYY"
+              )}`}</div>
             </Grid>
             <Grid container item direction="row" xs={12}>
               <div className={classes.contentHeader}>Rocket Used:</div>

@@ -1,6 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import { Grid, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import moment from "moment";
 import React, { FunctionComponent } from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -68,7 +69,9 @@ const MainPage: FunctionComponent = () => {
             </Grid>
             <Grid container item xs={12}>
               <div className={classes.contentHeader}>Launch Time UTC:</div>
-              <div>{` ${launchNext.launch_date_utc}`}</div>
+              <div>{` ${moment(launchNext.launch_date_utc).format(
+                "hh:mma DD/MM/YYYY"
+              )}`}</div>
             </Grid>
             <Grid container item xs={12}>
               <div className={classes.contentHeader}>Rocket Type:</div>

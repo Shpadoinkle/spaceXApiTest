@@ -7467,6 +7467,11 @@ mobx@^6.0.0:
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.0.0.tgz#676fc8dd225d26485d354ff44a1f8d00938b32dc"
   integrity sha512-bjwqOFkr2FebW0sul7UgbWz4/l7mNvTmE1FPhj95Jeg74v2GSCvtyLeuuiRDF/2bClD9K/P4x/RpLzupbtP7Iw==
 
+moment@^2.29.0:
+  version "2.29.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.0.tgz#fcbef955844d91deb55438613ddcec56e86a3425"
+  integrity sha512-z6IJ5HXYiuxvFTI6eiQ9dm77uE0gyy1yXNApVHqTcnIKfY9tIwEjlzsZ6u1LQXvVgKeTnv9Xm7NDvJ7lso3MtA==
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
