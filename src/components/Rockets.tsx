@@ -30,15 +30,15 @@ const MainPage: FunctionComponent = () => {
     <Grid direction="column" container spacing={1}>
       <Grid item xs={12}>
         <div style={{ color: "#fff" }}>
-          <Typography variant="h4">Rocket Types</Typography>
+          <Typography variant="h4" color="primary">
+            Rocket Types
+          </Typography>
         </div>
       </Grid>
       {loading && (
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <div style={{ color: "#fff" }}>
-              <Typography color="inherit">Loading</Typography>
-            </div>
+            <Typography color="primary">Loading</Typography>
           </Grid>
         </Grid>
       )}

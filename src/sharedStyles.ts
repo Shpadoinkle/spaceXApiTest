@@ -5,6 +5,11 @@ const SharedStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
     },
+    paper: {
+      backgroundColor: "#1C2636",
+      padding: theme.spacing(2),
+      color: theme.palette.text.secondary,
+    },
   })
 );
 export default SharedStyles;

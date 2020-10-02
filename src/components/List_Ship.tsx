@@ -1,19 +1,11 @@
-import { Divider, Grid, Hidden, Paper } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Divider, Grid, Hidden, Paper, Typography } from "@material-ui/core";
 import moment from "moment";
 import React, { FunctionComponent } from "react";
 import { Cell, Pie, PieChart } from "recharts";
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
-  },
-  contentHeader: { fontWeight: 700, marginRight: theme.spacing(1) },
-}));
+import SharedStyles from "../sharedStyles";
 
 const ListShip: FunctionComponent<any> = ({ ship = {} }) => {
-  const classes = useStyles();
+  const sharedClasses = SharedStyles();
   const data = [
     { name: "Success", value: ship.success_rate_pct || 0 },
     { name: "Fail", value: 100 - (ship.success_rate_pct || 0) },
@@ -22,7 +14,7 @@ const ListShip: FunctionComponent<any> = ({ ship = {} }) => {
 
   return (
     <Grid item xs={12}>
-      <Paper className={classes.paper}>
+      <Paper className={sharedClasses.paper}>
         <Grid container direction="row" justify="space-between" spacing={2}>
           <Grid
             container
@@ -34,16 +26,18 @@ const ListShip: FunctionComponent<any> = ({ ship = {} }) => {
             sm={8}
           >
             <Grid container item direction="row" xs={12}>
-              <div className={classes.contentHeader}>Name:</div>
-              <div>{` ${ship.name}`}</div>
+              <Typography color="primary">Name:&nbsp;</Typography>
+              <Typography color="secondary">{` ${ship.name}`}</Typography>
             </Grid>
             <Grid container item direction="row" xs={12}>
-              <div className={classes.contentHeader}>First Flight:</div>
-              <div>{` ${moment(ship.first_flight).format("DD/MM/YYYY")}`}</div>
+              <Typography color="primary">First Flight:&nbsp;</Typography>
+              <Typography color="secondary">{` ${moment(
+                ship.first_flight
+              ).format("DD/MM/YYYY")}`}</Typography>
             </Grid>
             <Grid container item direction="row" xs={12}>
-              <div className={classes.contentHeader}>Cost per launch:</div>
-              <div>{` $${ship.cost_per_launch}`}</div>
+              <Typography color="primary">Cost per launch:&nbsp;</Typography>
+              <Typography color="secondary">{` $${ship.cost_per_launch}`}</Typography>
             </Grid>
           </Grid>
           <Hidden xsDown>
@@ -66,8 +60,10 @@ const ListShip: FunctionComponent<any> = ({ ship = {} }) => {
               alignContent="center"
               xs={12}
             >
-              <div className={classes.contentHeader}>Success Rate:</div>
-              <div>{` ${ship.success_rate_pct || 0}%`}</div>
+              <Typography color="primary">Success Rate:&nbsp;</Typography>
+              <Typography color="secondary">{` ${
+                ship.success_rate_pct || 0
+              }%`}</Typography>
             </Grid>
             <Grid container item justify="center" alignContent="center" xs={12}>
               <PieChart width={100} height={50}>

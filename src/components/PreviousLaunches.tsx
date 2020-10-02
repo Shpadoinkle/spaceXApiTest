@@ -32,14 +32,16 @@ const MainPage: FunctionComponent = () => {
     <Grid direction="column" container spacing={1}>
       <Grid item xs={12}>
         <div style={{ color: "#fff" }}>
-          <Typography variant="h4">Previous 10 Launches</Typography>
+          <Typography variant="h4" color="primary">
+            Previous 10 Launches
+          </Typography>
         </div>
       </Grid>
       {loading && (
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <div style={{ color: "#fff" }}>
-              <Typography color="inherit">Loading</Typography>
+              <Typography color="primary">Loading</Typography>
             </div>
           </Grid>
         </Grid>

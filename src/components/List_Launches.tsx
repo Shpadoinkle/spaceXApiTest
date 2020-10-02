@@ -1,22 +1,14 @@
-import { Divider, Grid, Hidden, Paper } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Divider, Grid, Hidden, Paper, Typography } from "@material-ui/core";
 import moment from "moment";
 import React, { FunctionComponent } from "react";
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
-  },
-  contentHeader: { fontWeight: 700, marginRight: theme.spacing(1) },
-}));
+import SharedStyles from "../sharedStyles";
 
 const ListShip: FunctionComponent<any> = ({ launch = {} }) => {
-  const classes = useStyles();
+  const sharedClasses = SharedStyles();
 
   return (
     <Grid item xs={12}>
-      <Paper className={classes.paper}>
+      <Paper className={sharedClasses.paper}>
         <Grid container direction="row" justify="space-between" spacing={2}>
           <Grid
             container
@@ -28,18 +20,18 @@ const ListShip: FunctionComponent<any> = ({ launch = {} }) => {
             sm={8}
           >
             <Grid container item direction="row" xs={12}>
-              <div className={classes.contentHeader}>Mission Name:</div>
-              <div>{` ${launch.mission_name}`}</div>
+              <Typography color="primary">Mission Name:&nbsp;</Typography>
+              <Typography color="secondary">{` ${launch.mission_name}`}</Typography>
             </Grid>
             <Grid container item direction="row" xs={12}>
-              <div className={classes.contentHeader}>Launch Date:</div>
-              <div>{` ${moment(launch.launch_date_utc).format(
-                "hh:mma DD/MM/YYYY"
-              )}`}</div>
+              <Typography color="primary">Launch Date:&nbsp;</Typography>
+              <Typography color="secondary">{` ${moment(
+                launch.launch_date_utc
+              ).format("hh:mma DD/MM/YYYY")}`}</Typography>
             </Grid>
             <Grid container item direction="row" xs={12}>
-              <div className={classes.contentHeader}>Rocket Used:</div>
-              <div>{` ${launch.rocket.rocket_name}`}</div>
+              <Typography color="primary">Rocket Used:&nbsp;</Typography>
+              <Typography color="secondary">{` ${launch.rocket.rocket_name}`}</Typography>
             </Grid>
           </Grid>
           <Hidden xsDown>
@@ -62,8 +54,10 @@ const ListShip: FunctionComponent<any> = ({ launch = {} }) => {
               alignContent="center"
               xs={12}
             >
-              <div className={classes.contentHeader}>Successful:</div>
-              <div>{`${launch.launch_success ? "Yes" : "No"}`}</div>
+              <Typography color="primary">Successful:&nbsp;</Typography>
+              <Typography color="secondary">{`${
+                launch.launch_success ? "Yes" : "No"
+              }`}</Typography>
             </Grid>
           </Grid>
         </Grid>

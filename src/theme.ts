@@ -9,12 +9,16 @@ const theme = (createMuiTheme as any)({
     },
     loading: "#fff",
   },
+
+  paper: {
+    backgroundColor: "#888",
+  },
   palette: {
     primary: {
-      main: "#018346",
+      main: "#12ECE5",
     },
     secondary: {
-      main: "#58d198",
+      main: "#ccc",
     },
     error: {
       main: "#f51a19",
@@ -23,6 +27,7 @@ const theme = (createMuiTheme as any)({
       default: "#000",
     },
   },
+  divider: {},
   overrides: {
     MUIDataTableToolbarSelect: {
       root: {
@@ -32,6 +37,11 @@ const theme = (createMuiTheme as any)({
     MUIDataTableFilter: {
       root: {
         backgroundColor: "#FFF",
+      },
+    },
+    MuiDivider: {
+      root: {
+        backgroundColor: "#12ECE544",
       },
     },
   },
