@@ -14,7 +14,9 @@ const MainPage: FunctionComponent = () => {
       //   justify="center"
     >
       <Grid item xs={12}>
-        <Typography variant="h3">Space X Api</Typography>
+        <Typography variant="h3" color="secondary">
+          Space X Api
+        </Typography>
       </Grid>
 
       <Grid item xs={12}>

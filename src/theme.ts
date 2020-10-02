@@ -7,6 +7,9 @@ const theme = (createMuiTheme as any)({
     h3: {
       color: "#fff",
     },
+    h4: {
+      fontSize: 32,
+    },
     loading: "#fff",
   },
 

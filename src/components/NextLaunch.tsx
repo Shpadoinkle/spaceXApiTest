@@ -32,7 +32,7 @@ const MainPage: FunctionComponent = () => {
     <Grid direction="column" container spacing={1}>
       <Grid item xs={12}>
         <div style={{ color: "#fff" }}>
-          <Typography variant="h4" color="primary">
+          <Typography variant="h4" color="secondary">
             Upcoming Launch
           </Typography>
         </div>
